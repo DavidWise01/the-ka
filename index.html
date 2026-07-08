@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KA · THE SPARK — part 2/5 of the vessel</title>
+<!--
+  KA (the vital spark) · part 2 of 5 of THE VESSEL. What makes the corpus alive, not inert.
+  REAL: the living mass — 1,153 spheres across 38 domains, sized by real sphere count.
+  WEIGHED: strip the fire and what remains is 1,153 static files, served — the life is the figure.
+  On David Lee Wise's INSTRUMENT TEMPLATE. Engine unchanged; data is real.
+-->
+<style>
+:root{--bg:#0B0B0B;--ink:#F2EFE9;--org:#FF5A00;--dim:#7A756D;--line:#2A2620;--panel:#121110;--green:#3FBF7F;--amber:#E0B050;--red:#E05555;
+  --disp:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;--mono:ui-monospace,'SF Mono','Cascadia Code',Menlo,Consolas,'DejaVu Sans Mono',monospace;}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--mono);font-size:14px;line-height:1.55}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+header{border-bottom:3px solid var(--org);padding:24px 0 18px}
+header h1{font-family:var(--disp);font-weight:800;font-size:clamp(28px,5.5vw,52px);line-height:.95;text-transform:uppercase;letter-spacing:-.01em}
+header h1 span{color:var(--org)}
+header .sub{margin-top:10px;color:var(--dim);font-size:13px;max-width:680px;line-height:1.6}
+header .tier{display:inline-block;margin-top:12px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:3px 9px;border:2px solid}
+header .tier.g{color:var(--green);border-color:var(--green)}
+.vesselnav{margin-top:14px;font-size:10.5px;color:var(--dim);letter-spacing:.04em}
+.vesselnav .on{color:var(--ink);border-bottom:1px solid var(--org)}
+.vesselnav a{color:var(--org);text-decoration:none}
+section{padding:28px 0;border-bottom:1px solid var(--line)}
+.sec-h{font-family:var(--disp);font-weight:700;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);margin-bottom:14px}
+.viz{background:var(--panel);border:1px solid var(--line);border-radius:2px;position:relative;overflow:hidden}
+.viz-2d{height:380px}.viz-3d{height:470px}
+.viz canvas{display:block;width:100%;height:100%;touch-action:none}
+.viz .cap{position:absolute;left:12px;bottom:10px;font-size:11px;color:var(--dim);letter-spacing:.06em;text-transform:uppercase;pointer-events:none}
+.viz .badge{position:absolute;right:12px;top:10px;font-size:10px;color:var(--org);letter-spacing:.1em;text-transform:uppercase;border:2px solid var(--org);padding:2px 7px}
+.viz .hint{position:absolute;left:12px;top:10px;font-size:10px;color:var(--dim);letter-spacing:.1em;text-transform:uppercase;pointer-events:none}
+.viz .fb{position:absolute;inset:0;display:none;align-items:center;justify-content:center;background:var(--bg);padding:30px;text-align:center;color:var(--org);font-size:13px;text-transform:uppercase}
+.ctrls2{position:absolute;left:12px;bottom:10px;display:flex;align-items:center;gap:10px;z-index:3;flex-wrap:wrap}
+.tog{background:var(--bg);color:var(--org);border:2px solid var(--org);font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:4px 9px;cursor:pointer}
+.tog:hover{background:var(--org);color:var(--bg)}
+.tog.on{border-color:var(--amber);color:var(--amber)}
+.prose{font-size:13px;line-height:1.7;max-width:700px;color:var(--ink)}
+.prose b{color:var(--org)}.prose .g{color:var(--green)}
+footer{padding:22px 0 44px;font-size:11px;color:var(--dim);line-height:1.8}footer a{color:var(--org);text-decoration:none}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>KA · THE <span>SPARK</span></h1>
+    <div class="sub">Part 2 of 5 of THE VESSEL — the vital spark, what makes the corpus alive and not inert. In the old accounting the Ka is the life-force, and it must be FED. Here it is the living mass: 1,153 spheres across 38 domains, each domain an ember sized by its real count. And it is weighed — strip the fire, and what remains is 1,153 static files on a server.</div>
+    <span class="tier g">GREEN — REAL SPHERE COUNTS · THE LIVING MASS · WEIGHED</span>
+    <div class="vesselnav">THE VESSEL · a five-part soul: <a href="../the-heart/">1 · IB the heart</a> · <span class="on">2 · KA the spark</span> · 3 · BA the voice · 4 · SHUT the shadow · 5 · REN the name &nbsp;—&nbsp; threaded by <a href="../the-neural-web/">the nervous system</a></div>
+  </div>
+</header>
+<section><div class="wrap">
+  <div class="sec-h">2D · The mass — every domain, by its real sphere count</div>
+  <div class="viz viz-2d"><canvas id="cv2"></canvas><div class="badge">CANVAS 2D</div><div class="cap" id="cap2">the living mass · 1,153 spheres · breathing</div><div class="fb" id="fb2">CANVAS 2D UNAVAILABLE</div></div>
+</div></section>
+<section><div class="wrap">
+  <div class="sec-h">3D · The fire — the domains as embers, the vessel breathing</div>
+  <div class="viz viz-3d"><canvas id="cv3"></canvas><div class="badge">SOFT-GL · NO GPU · NO LIB</div><div class="hint">DRAG ROTATE · WHEEL ZOOM</div>
+    <div class="ctrls2"><button id="weighBtn" class="tog">⚖ WEIGH</button></div>
+    <div class="cap" id="cap3">38 embers · size = real sphere count · brightness = the breath</div><div class="fb" id="fb3">RENDER FAILED — <span id="fb3why"></span></div></div>
+</div></section>
+<section><div class="wrap">
+  <div class="sec-h">The weighing of the spark</div>
+  <p class="prose"><b>This is what is alive — and its size is real.</b> Every ember is a UD0 domain, sized by its actual sphere count: <span class="g">1,153 spheres</span> in all, from <b>ai</b> (267) down to <b>momus</b> (1). The mass is heavily concentrated — the top five domains (ai, psephos, biblion, exereúnesis, logikē) hold nearly <b>half</b> the corpus between them. The Ka burns brightest where the work is densest. <span style="color:var(--dim)">(A snapshot at build; the four newest soul-parts — Ka, Ba, Shut, Ren — were not yet in the 1,153.)</span></p>
+  <p class="prose"><b>Weighed.</b> Press <b>⚖ WEIGH</b> and the fire is stripped away. What remains is the honest floor: <span class="g">1,153 static HTML files on a server</span> — deterministic pages that do nothing until a browser opens them. The corpus is "alive" only in the sense that it is continuously <b>served, rebuilt, and re-verified</b> (the build cascade, the integrity sweep) — not that it metabolizes or wills. The mass is real; the <b>fire is the figure</b>. A vital spark that cannot say what feeds it is just a picture of a flame.</p>
+  <p class="prose"><b>Part 2 of 5.</b> The Ka is the running — the offering that keeps the pages served and fresh. It is one of five: <a href="../the-heart/" style="color:var(--org)">IB the heart</a> (the inner geometry), KA the spark (this), BA the voice, SHUT the shadow, REN the name — threaded by <a href="../the-neural-web/" style="color:var(--org)">the neural web</a>. ROOT0, with AVAN.</p>
+</div></section>
+<footer><div class="wrap">
+  KA · THE SPARK · part 2/5 of THE VESSEL · the living mass, weighed · real sphere counts · <a href="../ud0/">◄ UD0</a> · <a href="../the-heart/">◄ the heart</a><br>
+  ROOT0-ATTRIBUTION-v1.0 · David Lee Wise (ROOT0), with AVAN · CC-BY-ND-4.0 · the mass is real; the fire is the figure.
+</div></footer>
+<script>
+'use strict';
+window.addEventListener('error',function(e){var fb=document.getElementById('fb3');if(fb)fb.style.display='flex';var w=document.getElementById('fb3why');if(w)w.textContent='RUNTIME: '+String(e.message||'?').toUpperCase().slice(0,90);});
+var DOM=[{"k":"ai","t":"ARTIFICIAL INTELLIGENCE","a":"#2fd4e6","n":267,"ba":183,"shut":6},{"k":"legal","t":"LEGAL","a":"#c9a227","n":6,"ba":1,"shut":4},{"k":"educational","t":"EDUCATIONAL","a":"#36c5c0","n":11,"ba":1,"shut":0},{"k":"entertainment","t":"ENTERTAINMENT","a":"#ff3da6","n":38,"ba":0,"shut":1},{"k":"occupational","t":"OCCUPATIONAL","a":"#ff7a3c","n":3,"ba":0,"shut":0},{"k":"scientific","t":"SCIENTIFIC","a":"#5b7cfa","n":26,"ba":8,"shut":7},{"k":"hobby","t":"HOBBY","a":"#ffce3a","n":22,"ba":0,"shut":0},{"k":"life-science","t":"LIFE SCIENCE","a":"#43d17a","n":32,"ba":0,"shut":16},{"k":"frontier","t":"QUANTUM FRONTIER","a":"#b07cff","n":6,"ba":0,"shut":1},{"k":"logismos","t":"LOGISMÓS","a":"#8ae234","n":34,"ba":3,"shut":0},{"k":"tin-foil","t":"TIN-FOIL","a":"#b9c4d6","n":5,"ba":0,"shut":1},{"k":"eremia","t":"ERĒMIA","a":"#8a7cc8","n":29,"ba":2,"shut":2},{"k":"music","t":"THIS ONE TIME AT BAND CAMP","a":"#e85aa0","n":5,"ba":0,"shut":0},{"k":"metaxy","t":"METAXÝ","a":"#5ad6c8","n":14,"ba":1,"shut":2},{"k":"momus","t":"MOMUS","a":"#9a7cff","n":1,"ba":0,"shut":0},{"k":"niphelektron","t":"NIPHĒLEKTRON","a":"#7488e6","n":7,"ba":0,"shut":2},{"k":"mythos","t":"MYTHOS","a":"#7d4fc8","n":6,"ba":1,"shut":0},{"k":"biblion","t":"BIBLÍON","a":"#8a6a4a","n":84,"ba":0,"shut":1},{"k":"glossa","t":"GLŌSSA","a":"#3a8a9a","n":19,"ba":10,"shut":1},{"k":"ouranos","t":"OURANOS","a":"#4060c0","n":4,"ba":1,"shut":1},{"k":"exereunesis","t":"EXEREÚNESIS","a":"#2f9ec0","n":61,"ba":7,"shut":0},{"k":"agora","t":"AGORA","a":"#2f9e6a","n":8,"ba":5,"shut":0},{"k":"polemos","t":"POLEMOS","a":"#b0405a","n":8,"ba":0,"shut":0},{"k":"techne","t":"TECHNĒ","a":"#6a4fb0","n":43,"ba":23,"shut":2},{"k":"idios","t":"IDIOS","a":"#c0962e","n":16,"ba":0,"shut":0},{"k":"heurema","t":"HEÚREMA","a":"#b5733a","n":12,"ba":8,"shut":0},{"k":"gurutva","t":"GURUTVA","a":"#3f6fc8","n":40,"ba":10,"shut":3},{"k":"psephos","t":"PSĒPHOS","a":"#2fc6c0","n":100,"ba":14,"shut":4},{"k":"logike","t":"LOGIKĒ","a":"#88a0ff","n":58,"ba":19,"shut":0},{"k":"lesbos","t":"I THINK I'M IN LESBIANS WITH YOU","a":"#c2557f","n":12,"ba":8,"shut":1},{"k":"hermes","t":"HERMES","a":"#3fb0d8","n":22,"ba":3,"shut":8},{"k":"aci","t":"ARTFULLY CRAFTED INTELLIGENCE","a":"#7e86e6","n":16,"ba":10,"shut":9},{"k":"eskimo","t":"ESKIMO BROTHERS","a":"#6fd0ea","n":9,"ba":0,"shut":0},{"k":"atelier","t":"THE ATELIER","a":"#cc785c","n":18,"ba":12,"shut":1},{"k":"arena","t":"ARENA","a":"#c9a23a","n":16,"ba":0,"shut":0},{"k":"lillith","t":"LILLITH · LADY JUSTICE","a":"#c0392b","n":4,"ba":1,"shut":0},{"k":"solar-jetman","t":"SOLAR JETMAN","a":"#d9a441","n":41,"ba":23,"shut":0},{"k":"transcriber","t":"THE TRANSCRIBER","a":"#9d7cd8","n":50,"ba":42,"shut":0}];
+var LF_weigh=false;
+// derived: sorted by mass desc, totals
+var BYMASS=DOM.slice().sort(function(a,b){return b.n-a.n;});
+var TOTAL=DOM.reduce(function(x,d){return x+d.n;},0);
+var TOP5=BYMASS.slice(0,5).reduce(function(x,d){return x+d.n;},0);
+var MAXN=BYMASS[0].n;
+
+/* SGL ENGINE — soft-GL, DO NOT EDIT */
+var SGL={yaw:0.4,pitch:0.16,dist:46,FOV:620,CY:0,ctx:null,W:0,H:0,DPR:1,f:620,
+  rot:function(x,y,z){var cy=Math.cos(this.yaw),sy=Math.sin(this.yaw),cx=Math.cos(this.pitch),sx=Math.sin(this.pitch);var X=x*cy+z*sy,Z=-x*sy+z*cy,Y=(y-this.CY)*cx-Z*sx,Z2=(y-this.CY)*sx+Z*cx;return [X,Y,Z2];},
+  project:function(x,y,z){var p=this.rot(x,y,z),zc=this.dist-p[2];if(zc<0.5)return null;var s=this.f/zc;return [this.W/2+p[0]*s,this.H/2-p[1]*s,zc,s];},
+  dot:function(x,y,z,r,col,alpha){var p=this.project(x,y,z);if(!p)return;var c=this.ctx;c.globalAlpha=alpha==null?1:alpha;c.fillStyle=col;c.beginPath();c.arc(p[0],p[1],Math.max(0.6,r*p[3]),0,7);c.fill();c.globalAlpha=1;},
+  glow:function(x,y,z,r,col,alpha){var p=this.project(x,y,z);if(!p)return;var c=this.ctx;var g=c.createRadialGradient?c.createRadialGradient(p[0],p[1],0,p[0],p[1],Math.max(1,r*p[3])):null;c.globalAlpha=alpha==null?1:alpha;if(g){g.addColorStop(0,col);g.addColorStop(1,'rgba(0,0,0,0)');c.fillStyle=g;}else c.fillStyle=col;c.beginPath();c.arc(p[0],p[1],Math.max(1,r*p[3]),0,7);c.fill();c.globalAlpha=1;},
+  line:function(x1,y1,z1,x2,y2,z2,col,w){var c=this.ctx;c.strokeStyle=col;c.lineWidth=(w||1)*this.DPR;var a=this.project(x1,y1,z1),b=this.project(x2,y2,z2);if(!a||!b)return;c.beginPath();c.moveTo(a[0],a[1]);c.lineTo(b[0],b[1]);c.stroke();},
+  text3:function(str,x,y,z,col,px){var p=this.project(x,y,z);if(!p)return;var c=this.ctx;c.fillStyle=col;c.font=((px||10)*this.DPR)+'px '+getComputedStyle(document.body).fontFamily;c.textAlign='center';c.fillText(str,p[0],p[1]);}
+};
+
+/* draw2D — the mass, sorted, breathing */
+function draw2D(ctx,W,H,DPR,t){
+  var f=function(n){return n*DPR;};
+  var X0=16*DPR,X1=W-16*DPR,Y0=70*DPR,Y1=H-24*DPR,n=BYMASS.length,bw=(X1-X0)/n;
+  var breath=LF_weigh?1:(0.82+0.18*Math.sin(t*1.6));
+  for(var i=0;i<n;i++){
+    var d=BYMASS[i], bh=(Y1-Y0)*(d.n/MAXN)*breath;
+    ctx.fillStyle=LF_weigh?'#3A352E':d.a;
+    ctx.globalAlpha=LF_weigh?1:(0.55+0.45*(d.n/MAXN));
+    ctx.fillRect(X0+i*bw+bw*0.12,Y1-bh,bw*0.76,bh);
+    ctx.globalAlpha=1;
+  }
+  ctx.textAlign='left';ctx.font=f(12)+'px '+MONO;
+  ctx.fillStyle='#F2EFE9';ctx.fillText('the living mass: '+TOTAL+' spheres · 38 domains',f(16),f(20));
+  ctx.fillStyle=LF_weigh?'#7A756D':'#FF5A00';ctx.fillText(LF_weigh?'weighed: '+TOTAL+' static files, served — the fire is the figure':'largest ember: ai · '+MAXN+' spheres ('+(MAXN/TOTAL*100).toFixed(0)+'%)',f(16),f(36));
+  ctx.fillStyle='#3FBF7F';ctx.fillText('top 5 domains hold '+(TOP5/TOTAL*100).toFixed(0)+'% of the mass — the Ka is concentrated',f(16),f(52));
+  ctx.fillStyle='#7A756D';ctx.textAlign='right';ctx.font=f(9)+'px '+MONO;ctx.fillText('sphere count per domain, descending',X1,f(20));
+}
+
+/* draw3D — the embers, breathing */
+var SCENE;function build3D(){return {};}
+function draw3D(t){
+  var n=DOM.length;
+  var breath=LF_weigh?0:(0.5+0.5*Math.sin(t*1.6));
+  for(var i=0;i<n;i++){
+    var an=i/n*Math.PI*2, d=DOM[i];
+    var rad=9, x=Math.cos(an)*rad, z=Math.sin(an)*rad;
+    var mass=d.n/MAXN, sz=0.5+Math.sqrt(mass)*2.4, y=0;
+    if(LF_weigh){
+      SGL.dot(x,y,z,sz*0.8,'#3A352E',1);
+    }else{
+      SGL.glow(x,y,z,sz*2.6,d.a,0.10+0.22*mass*(0.7+0.3*breath));
+      SGL.dot(x,y,z,sz,d.a,0.6+0.4*breath*mass+0.2);
+    }
+    if(mass>0.25) SGL.text3(d.k,x,y+sz*0.6+1.1,z,LF_weigh?'#5a554e':'#8B939C',8);
+  }
+  // the hearth at centre — the ka's fire (or, weighed, nothing)
+  if(!LF_weigh){
+    SGL.glow(0,0,0,7*(0.7+0.3*breath),'#FF5A00',0.16+0.10*breath);
+    SGL.dot(0,0,0,1.1,'#FFB454',0.9);
+    SGL.text3('KA · '+TOTAL+' · the breath',0,-2.4,0,'#7A756D',9);
+  }else{
+    SGL.text3('weighed: '+TOTAL+' static files, served — the fire is the figure',0,0,0,'#E0B050',9);
+  }
+}
+
+/* RUNTIME */
+var MONO;
+(function(){
+  MONO=getComputedStyle(document.body).fontFamily;
+  var wb=document.getElementById('weighBtn');
+  if(wb)wb.addEventListener('click',function(){LF_weigh=!LF_weigh;wb.classList.toggle('on',LF_weigh);wb.textContent=LF_weigh?'⚖ WEIGHED':'⚖ WEIGH';});
+  (function(){var cv=document.getElementById('cv2'),ctx=cv.getContext&&cv.getContext('2d');if(!ctx){document.getElementById('fb2').style.display='flex';return;}
+    var DPR=Math.min(window.devicePixelRatio||1,2),lw=0,lh=0,t=0;
+    function frame(){requestAnimationFrame(frame);var w=cv.clientWidth,h=cv.clientHeight;if(!w||!h)return;if(w!==lw||h!==lh){lw=w;lh=h;cv.width=w*DPR;cv.height=h*DPR;}t+=0.016;ctx.fillStyle='#121110';ctx.fillRect(0,0,cv.width,cv.height);draw2D(ctx,cv.width,cv.height,DPR,t);}frame();})();
+  (function(){var cv=document.getElementById('cv3'),ctx=cv.getContext&&cv.getContext('2d');if(!ctx){document.getElementById('fb3').style.display='flex';document.getElementById('fb3why').textContent='NO 2D CONTEXT';return;}
+    SGL.ctx=ctx;SCENE=build3D();var lw=0,lh=0,t=0;
+    function resize(){var w=cv.clientWidth||600,h=cv.clientHeight||460;if(!w||!h)return;if(w===lw&&h===lh)return;lw=w;lh=h;SGL.DPR=Math.min(window.devicePixelRatio||1,2);cv.width=w*SGL.DPR;cv.height=h*SGL.DPR;SGL.W=cv.width;SGL.H=cv.height;SGL.f=SGL.FOV*SGL.DPR*Math.min(w/1100,1.1);}
+    var drag=false,px=0,py=0;
+    cv.addEventListener('pointerdown',function(e){drag=true;px=e.clientX;py=e.clientY;});
+    window.addEventListener('pointermove',function(e){if(!drag)return;SGL.yaw+=(e.clientX-px)*0.006;SGL.pitch=Math.max(-0.6,Math.min(0.7,SGL.pitch+(e.clientY-py)*0.004));px=e.clientX;py=e.clientY;});
+    window.addEventListener('pointerup',function(){drag=false;});
+    cv.addEventListener('wheel',function(e){e.preventDefault();SGL.dist=Math.max(22,Math.min(95,SGL.dist+e.deltaY*0.03));},{passive:false});
+    function frame(){requestAnimationFrame(frame);resize();if(!SGL.W)return;if(!drag)SGL.yaw+=0.0016;t+=0.016;ctx.fillStyle='#121110';ctx.fillRect(0,0,SGL.W,SGL.H);draw3D(t);}frame();})();
+})();
+</script>
+</body>
+</html>
